@@ -1,6 +1,31 @@
 # my-project
 
-> this is my first vue project
+由Vue 2.0编写的日历组件
+
+
+props: {
+  	show: { //是否显示组件
+  		type: Boolean, 
+  		default: true
+  	},
+  	showCalendar: { //是否显示日历
+  		type: Boolean,
+  		default: true
+  	},
+  	limit: { //自定义范围
+  		type: Object,
+  		default () {
+  			return {
+  				minYear: 1900,
+  				minMonth: 1,
+  				minDay: 1,
+  				maxYear: 2030,
+  				maxMonth: 3,
+  				maxDay: 20
+  			}
+  		}
+  	}
+  }
 
 ## Build Setup
 
